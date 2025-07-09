@@ -157,7 +157,7 @@ html {
   justify-content: center;
 }
 .btn {
-  padding: 15px 25px;
+  padding: 18px 32px;
   font-size: 1rem;
   background-color: var(--secondary-color);
   color: var(--primary);
@@ -243,14 +243,14 @@ html {
 
 .founder-intro h3 {
   font-size: 1.8rem;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   margin-bottom: 16px;
   font-weight: 600;
 }
 
 .founder-intro p {
   font-size: 1rem;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   margin-bottom: 24px;
   line-height: 1.6;
 }
@@ -258,9 +258,11 @@ html {
 .founder-btn,
 .submit-btn {
   display: inline-block;
-  padding: 12px 24px;
+  color: var(--primary-color);
+  padding: 20px 32px;
   font-weight: 500;
   max-width: 180px;
+  font-size: 16px;
 }
 
 #services {
