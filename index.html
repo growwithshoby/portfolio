@@ -301,13 +301,13 @@ html {
   color: #fff; /* changed from light-black to white */
 }
 .brand {
-  font-weight: 600;
-  font-size: 20px;
+  font-weight: 700;
+  font-size: 22px;
+  color: #34a361;
 }
 
 .name {
   font-size: 2.6rem;
-  color: #34a361; /* was green – now white for more class */
 }
 
 .btns-container {
@@ -323,15 +323,15 @@ html {
   height: 65px;
   font-size: 1.1rem;
   background-color: transparent;
-  border: 2px solid #34a361;
-  background-color: #34a361;
-  color: #000;
+  border: 2px solid #000;
+  background-color: #000;
+  color: #fff;
   font-weight: 700;
   cursor: pointer;
   transition: background 0.25s ease, color 0.25s ease;
 }
 .tw{
-  color:#34a361;
+  color:#000;
   font-size: 18px;
   font-weight: 600;
 }
@@ -340,7 +340,7 @@ html {
 .social > a > i:hover,
 .contact-btn:hover {
   background-color: transparent;
-  color: #34a361; /* reverse contrast on hover */
+  color: #000; /* reverse contrast on hover */
 }
 
 .social {
@@ -423,22 +423,15 @@ html {
 .founder-btn,
 .submit-btn {
   display: inline-block;
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-  font-weight: 600;
   max-width: 180px;
   font-size: 16px;
 }
 
 .founder > .btn {
-  background-color: #fff;
+  background-color: #000;
   border-radius: 10px;
   color: var(--secondary-color);
   transition: none;
-}
-.founder > .btn:hover {
-    background-color: #fff;
-    color: var(--secondary-color);
 }
 .founder{
     height: 65px;
@@ -814,7 +807,7 @@ html {
              <textarea id="message" name="message" rows="4" placeholder="Tell me about your project..." required></textarea>
            </div>
 
-          <button style="color:#000;" type="submit" class="submit-btn btn">Send Enquiry</button>
+          <button type="submit" class="submit-btn btn">Send Enquiry</button>
         </form>
     </section>
     </main>
