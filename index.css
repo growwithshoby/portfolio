@@ -57,7 +57,7 @@ svg:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #e6ddff;
+  border-bottom: 1px solid #ede7ff;
 }
 
 #logo {
@@ -79,7 +79,7 @@ svg:hover {
 .navlink > a {
   font-size: 14px;
   font-weight: 500;
-  color: #e6ddff;
+  color: #ede7ff;
   transition: color 0.2s ease;
 }
 
@@ -171,7 +171,7 @@ svg:hover {
 /* Info Section */
 .info {
   width: 100%;
-  background-color: #e6ddff;
+  background-color: #f1eefb;
   color: #181818;
 }
 
@@ -215,13 +215,13 @@ svg:hover {
 }
 
 .services-menu li span, .services-menu li.active span, .services-menu li:hover span {
-  color: #7b5bd2;
+  color: #6c51b7;
   font-weight: 700;
   transform: scale(1.05);
 }
 
 .services-menu li.active, .services-menu li:hover {
-  color: #7b5bd2;
+  color: #6c51b7;
   transform: scale(1.05);
 }
 
@@ -292,7 +292,7 @@ svg:hover {
 }
 
 .works-preview, #blog {
-  background-color: #e6ddff;
+  background-color: #f1eefb;
 }
 
 .works {
@@ -437,6 +437,7 @@ svg:hover {
 .post-box .date {
   font-size: 0.85rem;
   color: #777;
+  font-weight: 600;
 }
 
 .see-all {
@@ -560,7 +561,7 @@ footer {
 }
 
 .footer-section a {
-  color: #ccc;
+  color: #ede7ff;
   text-decoration: none;
 }
 
@@ -579,7 +580,7 @@ footer {
 .footer-socials svg {
   width: 20px;
   height: 20px;
-  fill: #ccc;
+  fill: #ede7ff;
   transition: fill 0.3s ease;
 }
 
@@ -646,7 +647,7 @@ footer {
   .hamburger span {
     width: 28px;
     height: 3px;
-    background-color: #f7f7e6;
+    background-color: #f1eefb;
     border-radius: 2px;
     transition: all 0.3s ease;
   }

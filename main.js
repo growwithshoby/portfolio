@@ -1,10 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.getElementById('hamburger');
   const navlinks = document.getElementById('mobile-nav');
+  const navItems = document.querySelectorAll('#mobile-nav a');
 
   if (hamburger && navlinks) {
     hamburger.addEventListener('click', () => {
       navlinks.classList.toggle('active');
+    });
+      navItems.forEach(link => {
+      link.addEventListener('click', () => {
+        navlinks.classList.remove('active');
+      });
     });
   }
     const words = ["SEO", "SEM", "Web", "Design"];
