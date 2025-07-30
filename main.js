@@ -1,29 +1,62 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // ✅ Handle Hamburger toggle if present
+document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.getElementById('hamburger');
-  const navlinks = document.getElementById('navlinks');
+  const navlinks = document.getElementById('mobile-nav');
+  const navItems = document.querySelectorAll('#mobile-nav a');
 
   if (hamburger && navlinks) {
     hamburger.addEventListener('click', () => {
       navlinks.classList.toggle('active');
     });
-  }
-
-  // ✅ Handle Logo click if present
-  const logoImgs = document.querySelectorAll('.logoImg');
-  if (logoImgs.length > 0) {
-    logoImgs.forEach(img => {
-      img.addEventListener('click', () => {
-        const currentUrl = window.location.href;
-        if (currentUrl.includes('/blog/')) {
-        // We are in blog/ folder
-        window.location.href = '/';
-      } else if (currentUrl.includes('/work')) {
-        window.location.href = '/';
-      } else {
-        window.location.href = '/';
-      }
+      navItems.forEach(link => {
+      link.addEventListener('click', () => {
+        navlinks.classList.remove('active');
       });
     });
   }
-});
+    const words = ["SEO", "SEM", "Web", "Design"];
+    const el = document.getElementById("dynamic-word");
+
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function type() {
+      const currentWord = words[wordIndex];
+      const visibleText = currentWord.substring(0, charIndex);
+
+      el.textContent = visibleText;
+
+      if (!isDeleting && charIndex < currentWord.length) {
+        charIndex++;
+        setTimeout(type, 160);
+      } else if (isDeleting && charIndex > 0) {
+        charIndex--;
+        setTimeout(type, 60);
+      } else {
+        if (!isDeleting) {
+          isDeleting = true;
+          setTimeout(type, 1000); // pause after full word
+        } else {
+          isDeleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+          setTimeout(type, 200);
+        }
+      }
+    }
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('mouseover', () => {
+        // Remove active from all
+        tabButtons.forEach(b => b.classList.remove('active'));
+        tabContents.forEach(tab => tab.classList.remove('active'));
+
+        // Add active to current
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+      });
+    });
+
+    type();
+  });

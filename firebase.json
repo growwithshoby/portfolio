@@ -6,14 +6,38 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "headers": [
+      {
+        "source": "**/*.@(js|css|webp|png|jpg|jpeg|svg|woff2|woff|ttf)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=31536000,immutable"
+          }
+        ]
+      },
+      {
+        "source": "/index.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      },
+      {
+        "source": "/sitemap.xml",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/xml"
+          }
+        ]
+      }
+    ],
     "rewrites": [
-      { "source": "/about", "destination": "/about.html" },
-      { "source": "/contact", "destination": "/contact.html" },
-      { "source": "/blog", "destination": "/blog.html" },
-      { "source": "/work", "destination": "/work.html" },
-      { "source": "/blog/post1", "destination": "/blog/post1.html" },
-      { "source": "/blog/post2", "destination": "/blog/post2.html" },
-      { "source": "404", "destination": "/404.html" },
+      { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
+      { "source": "/404", "destination": "/404.html" },
       { "source": "**", "destination": "/index.html" }
     ]
   }
