@@ -661,8 +661,8 @@ footer {
   }
   .services-menu {
     display: flex;
-    overflow-x: auto;
-    margin-bottom: 20px;
+    width: 100%;
+    height: 200px;
   }
   .services-menu ul {
     display: flex;
